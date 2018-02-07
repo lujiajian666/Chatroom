@@ -1,0 +1,65 @@
+#receive{
+    width: 80%;
+    margin: 10px auto;
+  }
+  span{
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-width: 30px;
+    max-width: 300px;
+    word-wrap: break-word;
+  }
+  .other{
+     position: relative;
+     text-align:right;
+  }
+  .other>span{
+    background:green;
+    color:white;
+  }
+  .other>i{
+   position: absolute;
+   top: 4px;
+   margin-left: 10px;
+  }
+  .other>span::before{
+   content: "";
+   position: absolute;
+   top: 4px;
+   right: -19px;
+   height: 0;
+   width: 0;
+   border: 10px solid transparent;
+   border-left-color:green;
+   z-index: 2;
+  }
+  .myself{
+    position: relative;
+  }
+  .myself>span{
+    border:1px solid #787878
+  }
+  .myself>span::before{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -19px;
+    height: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-right-color: white;
+    z-index: 2;
+  }
+  .myself>span::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -21px;
+    height: 0;
+    width: 0;
+    border: 11px solid transparent;
+    border-right-color: #787878;
+  }
