@@ -1,13 +1,20 @@
-
-    <h1 id="h1">Socket.No: {{username}}</h1>
-    <input [(ngModel)]="message" ng-keydown.enter=submit()>
-    <input type="submit" id="submit" value="提交" (click)=submit()>
-    <div id="receive">
-      <ng-container *ngFor="let item of receiveMessage">
-        <div [ngClass]="item.className">
-          <span>{{item.text}}</span>
-          <i *ngIf="item.className=='other'">{{item.from}}</i>
-        </div>
-      </ng-container>
+    <div class="member">
+      <p class="title">在线<span class="onlineNumber">2</span></p>
     </div>
+    <div class="talk-box">
+      <h1 class="title">群聊</h1>
+      <div class="talk-content">
+        <ng-container *ngFor="let item of receiveMessage">
+          <div [ngClass]="item.className">
+            <span>{{item.text}}</span>
+            <i *ngIf="item.className=='other'">{{item.from}}</i>
+          </div>
+        </ng-container>
+      </div>
+      <div class="send-message-box">
+        <input [(ngModel)]="message" (keydown.enter)=submit()>
+        <input type="submit" id="submit" value="提交" (click)=submit()>
+      </div>
+    </div>
+   
 

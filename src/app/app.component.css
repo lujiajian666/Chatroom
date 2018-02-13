@@ -1,6 +1,14 @@
-#receive{
-    width: 80%;
+  .member{
+    float: left;
+    width: 15%;
+    min-width: 70px;
+  }
+  .talk-box{
+    float: left;
+    margin-left: 5%;
+    width: 60%;
     margin: 10px auto;
+    min-width: 280px;
   }
   span{
     display: inline-block;
@@ -62,4 +70,7 @@
     width: 0;
     border: 11px solid transparent;
     border-right-color: #787878;
+  }
+  .title{
+    background: rgb(118, 207, 155)
   }

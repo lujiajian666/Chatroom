@@ -30,13 +30,13 @@ export class AppComponent implements OnInit{
   }
   submit(){
     this.receiveMessage.push({className:"myself",text:this.message,from:this.username});
-    this.socket.emit('sendMessage',{text:this.message,from:this.username,to:this.to});
+    this.socket.emit('sendMessage',{text:this.message,from:this.username});
   }
   ngOnInit(){
     const _self=this;
     this.username=this.getCookie("username");
     if(this.username==""){
-      this.username = +new Date();
+      this.username = new Date().getTime().toString();
       this.setCookie("username",this.username,1);
     }
     this.socket= io.connect('http://127.0.0.1:3000');
